@@ -1,3 +1,7 @@
 from django.db import models
 
-# Create your models here.
+class Animal(models.Model):
+    nome = models.CharField(max_length=100)
+    código = models.CharField(max_length=200)
+    historico = models.TextField()
+
