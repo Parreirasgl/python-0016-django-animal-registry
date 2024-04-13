@@ -6,12 +6,12 @@
     <title>Registro de cada Animal</title>
 </head>
 <body>
-    <h1>Animal Abc</h1>
+    <h1>Animal</h1>
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
         <button type="submit">Salvar Alterações</button>
-        <p><a href="/busca" class="btn"> Volte para a página inical</a></p>
+        <p><a href="/busca" class="btn"> Voltar para a página inical</a></p>
     </form>
 </body>
 </html>

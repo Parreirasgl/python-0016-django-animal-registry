@@ -5,7 +5,7 @@
 </head>
 <body>
 {% if input %}
-    <h1>Escolha o animal:</h1>
+    <h1>Escolha um animal por nome ou código:</h1>
     <form action="{% url 'path_buscar' %}" method="GET">
         <input type="text" name="input" placeholder="Buscar por posts...">
         <button type="submit">Buscar</button>
