@@ -1,11 +1,14 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <title>Hom Page - Escolher animal</title>
+    <link rel="stylesheet" href="{% static 'register/styles/base.css' %}">
+    <link rel="stylesheet" href="{% static 'register/styles/all-meetups.css' %}">
 </head>
 <body>
 {% if input %}
-    <h1>Escolha um animal por nome ou código:</h1>
+    <h1>Escolha um pet pelo nome ou código:</h1>
     <form action="{% url 'path_buscar' %}" method="GET">
         <input type="text" name="input" placeholder="Buscar por posts...">
         <button type="submit">Buscar</button>
