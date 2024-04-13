@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Hom Page - Escolher animal</title>
+</head>
+<body>
+{% if input %}
+    <h1>Escolha o animal:</h1>
+    <form action="{% url 'path_buscar' %}" method="GET">
+        <input type="text" name="input" placeholder="Buscar por posts...">
+        <button type="submit">Buscar</button>
+{% else %}
+    <h1>Escolha o animal:</h1>
+    <form action="{% url 'path_buscar' %}" method="GET">
+        <input type="text" name="input" placeholder="Buscar por posts...">
+        <button type="submit">Buscar</button>
+        <p>Valor inválido, tente de novo.</p>
+{% endif %}
+    </form>
+</body>
+</html>
