@@ -6,9 +6,9 @@ def buscar(request):
     query = request.GET.get('input', '')  
     if query:  
         try:
-            objeto_filtrado = Animal.objects.filter(nome=query).first()
-            if objeto_filtrado.nome:
-                nome_animal = objeto_filtrado.nome
+            objeto_filtrado = Animal.objects.filter(nome=query) | Animal.objects.filter(codigo=query)
+            if objeto_filtrado:
+                nome_animal = objeto_filtrado.first().nome
             return redirect('path_editar_registro', nome_animal)
         except:
             return render(request, 'register/busca.html', {'input': False})   
